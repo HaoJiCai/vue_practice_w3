@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/manager_login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="loginBlock">
+                <h1>Sign in to Home Page</h1>
+                <form class="loginInputBlock">
+                    <input type="email" id="accountInput" v-model="manager.username" @keyup.enter="login" placeholder="Email Address">
+                    <input type="password" id="passwordInput" v-model="manager.password" @keyup.enter="login" placeholder="Password">
+                    <button type="button" id="signinBtn" @click="login">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 載入 axios 套件 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 載入此頁 js -->
+    <script type="module" src="../js/manager_login.js"></script>
+</body>
+</html>
